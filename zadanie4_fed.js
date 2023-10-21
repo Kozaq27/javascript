@@ -1,0 +1,1 @@
+document.write("Szkielet zalizceniowy JavaSript Jakub Fedosiuk 3F".fontcolor("lime").bold("yes").fontsize(7)+"<br>");
