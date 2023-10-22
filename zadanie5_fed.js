@@ -1,0 +1,1 @@
+document.write("wykonal: Jakub Fedosiuk moj numer w dzienniku 7, czyli mam uklad [(7) mod 4=3] uklad 4".fontcolor("lime").bold("yes").fontsize(7)+"<br>");
