@@ -14,27 +14,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ułamki egipskie</title>
+  <title>Rozkład ułamków egipskich</title>
 </head>
 <body>
 <script>
-  var m_fed = prompt("Podaj wartość zmiennej m:");
-  m_fed = parseInt(m_fed);
-  if (m_fed > 0 && Number.isInteger(m_fed)) {
-    var ulamki_egipskie = "";
-    var mianownik = m_fed;
-    while (mianownik > 0) {
-      var ulamek = 1 / mianownik;
-      ulamki_egipskie += "1/" + mianownik;
-      mianownik = Math.ceil(mianownik / (mianownik + 1));
-      if (mianownik > 0) {
-        ulamki_egipskie += " + ";
+  var m_kow = prompt("Podaj wartość zmiennej m:");
+  var m = parseInt(m_kow);
+  function obliczUlamkiEgipskie(m) {
+    var wynik = "1/" + m + " = ";
+    var reszta = 1;
+    var denominator = 2;
+    while (reszta > 0) {
+      if (1 / denominator <= reszta) {
+        reszta -= 1 / denominator;
+        wynik += "1/" + denominator;
+        if (reszta > 0) {
+          wynik += " + ";
+        }
       }
+      denominator++;
     }
-    document.write("<p>Ułamki egipskie dla m=" + m_fed + ":</p>");
-    document.write("<p>1/" + m_fed + " = " + ulamki_egipskie + "</p>");
+    return wynik;
+  }
+  if (!isNaN(m) && m > 0 && Number.isInteger(m)) {
+    var result = obliczUlamkiEgipskie(m);
+    document.write("<p>Dane do sprawdzenia: m = " + m + ", 1/" + m + " = " + result + "</p>");
   } else {
-    document.write("<p>Podano nieprawidłową wartość m. Wartość musi być liczbą naturalną większą od 0.</p>");
+    document.write("<p>Podana wartość nie jest liczbą naturalną większą od 0.</p>");
   }
 </script>
 </body>
