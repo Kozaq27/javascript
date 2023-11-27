@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_Fedosiuk()
+ {
+ window.close()
+ }
+21
+</script>
+</head>
+<body>
+<form>
+<textarea name="Fedosiuk" cols="80" rows="25" disabled>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ułamki egipskie</title>
+	// wygenerowane przez SI
+</head>
+<body>
+<script>
+  var m_kow = prompt("Podaj wartość zmiennej m:");
+  m_kow = parseInt(m_kow);
+  if (m_kow > 0 && Number.isInteger(m_kow)) {
+    var ulamki_egipskie = "";
+    var mianownik = m_kow;
+    while (mianownik > 0) {
+      var ulamek = 1 / mianownik;
+      ulamki_egipskie += "1/" + mianownik;
+      mianownik = Math.ceil(mianownik / (mianownik + 1));
+      if (mianownik > 0) {
+        ulamki_egipskie += " + ";
+      }
+    }
+    document.write("<p>Ułamki egipskie dla m=" + m_kow + ":</p>");
+    document.write("<p>1/" + m_kow + " = " + ulamki_egipskie + "</p>");
+  } else {
+    document.write("<p>Podano nieprawidłową wartość m. Wartość musi być liczbą naturalną większą od 0.</p>");
+  }
+</script>
+</body>
+</html>
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_Fedosiuk()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
