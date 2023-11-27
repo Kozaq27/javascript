@@ -1,17 +1,39 @@
-<html>
+<!DOCTYPE html>
+<html lang="pl-PL">
 <head>
-<script type="text/javascript">
-function okno_zamknij_siejka()
-{
-window.close()
-}
+ <script type="text/javascript">
+ function okno_zamknij_Fedosiuk()
+ {
+ window.close()
+ }
+21
 </script>
 </head>
 <body>
-<form> <textarea name="siejka" cols="80" rows="20" readonly>Przyklad.html
-<HTML> <HEAD> <TITLE>SKRYPT trzeci --> zewnętrzny</TITLE> </HEAD> <BODY> <SCRIPT type="text/javascript" src="przyklad_zewnetrzny.js"></SCRIPT> </BODY> </HTML> przyklad3_zewnetrzny.js document.write("ostatnia modyfikacja strony".fontcolor("red").bold().fontsize(7)+"<br>"); document.write(document.lastModified); </textarea>
+ <form>
+ <textarea name="Fedosiuk" cols="80" rows="25" disabled>
+ Jakub Fedosiuk 3F_1
+ <!DOCTYPE html>
+ <head>
+ <title> proste obliczenia</title>
+ <meta charset="utf-8">
+ </head>
+ <body>
+<div style="color:green;font-size:36px;">
+<script lang="JavaScript">
+var liczba1=prompt("D1=","");
+var liczba2=prompt("D2=","");
+var ile_sekund_fed;
+var D1_fed=parseFloat(liczba1);
+var D2_fed=parseFloat(liczba2);
+ile_sekund_fed=(D1_fed-D2_fed)*24*3600;
+document.write("D1="+D1_fed+"D2="+D2_fed+"<br>")
+document.write("ile sekund="+ile_sekund_fed+"s"+ "<br>")
+</script>
+</div>
+</textarea>
 </form>
-<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_Fedosiuk()"/>
 <script type="text/javascript">
 </script>
 </body>
