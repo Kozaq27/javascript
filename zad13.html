@@ -6,27 +6,13 @@
 <body>
 <script>
   var m_kow = prompt("Podaj wartość zmiennej m:");
-  var m = parseInt(m_kow);
+  var m = parseInt(m_fed);
   function obliczUlamkiEgipskie(m) {
     var wynik = "1/" + m + " = ";
     var reszta = 1;
     var denominator = 2;
-    while (reszta > 0) {
-      if (1 / denominator <= reszta) {
-        reszta -= 1 / denominator;
-        wynik += "1/" + denominator;
-        if (reszta > 0) {
-          wynik += " + ";
-        }
-      }
-      denominator++;
-    }
-    return wynik;
-  }
-  if (!isNaN(m) && m > 0 && Number.isInteger(m)) {
     var result = obliczUlamkiEgipskie(m);
     document.write("<p>Dane do sprawdzenia: m = " + m + ", 1/" + m + " = " + result + "</p>");
-  } else {
     document.write("<p>Podana wartość nie jest liczbą naturalną większą od 0.</p>");
   }
 </script>
