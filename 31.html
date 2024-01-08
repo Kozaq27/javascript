@@ -2,17 +2,17 @@
 <head>
 <script type="text/javascript">
 var mebel = {
-Nazwa: 'Krzesło',
-Pochodzenie: 'IKEA',
-Tworzywo: 'Sztuczne',
+nazwa: 'stół',
+tworzywo: 'drewno',
+pochodzenie: 'Polska',
 pokaz: function ()
 {
-document.write(this.Nazwa + ' ' + this.Pochodzenie)
+document.write(this.nazwa + ' ' + this.tworzywo)
 }
 }
 mebel.pokaz();
-mebel.trwalosc=50;
-mebel.wypisz=function() {alert('trwalosc: ' + this.trwalosc + 'lat')}
+mebel.trwalosc=100;
+mebel.wypisz=function() {alert('Trwalosc: ' + this.trwalosc + 'lat')}
 mebel.wypisz();
 </script>
 </head>
