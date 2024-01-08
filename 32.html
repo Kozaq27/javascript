@@ -4,20 +4,20 @@
 function klient(Nazwa_k,Pochodzenie_k,Tworzywo_k)//początek konstruktora
 {
 this.Nazwa=Nazwa_k;
-this.Pochodzenie=pochodzenie_k;
 this.Tworzywo=Tworzywo_k;
+this.Pochodzenie=pochodzenie_k;
 }//koniec konstruktora
 klient.prototype.wypisz = function () //definicja metody
 {
-alert(this.Nazwa+ ' ' + this.Pochodzenie+ ' ' + this.Tworzywo);
+alert(this.Nazwa+ ' ' + this.Tworzywo+ ' ' + this.Pochodzenie);
 };
-var mebel1 = new klient("Krzeslo", "IKEA", "Sztuczne"); // nowy obiekt mebel1
-var mebel2 = new klient('Stol', 'IKEA', 'Drewno');
+var mebel1 = new klient("stol", "drewno", "Polska"); // nowy obiekt mebel1
+var mebel2 = new klient('krzeslo', 'plastik', 'Szwecja');
 mebel1.wypisz(); // uruchomienie metody wypisz() dotyczącej mebla 1
 mebel2.wypisz();
 document.write("dostęp do właściwości"+"<br>");
 // poniżej dostęp do pól mebla1
-document.write("klient pierwszy"+" "+mebel1.Nazwa+" "+mebel1.Pochodzenie+" "+mebel1.Tworzywo);
+document.write("klient pierwszy"+" "+mebel1.Nazwa+" "+mebel1.Tworzywo+" "+mebel1.Pochodzenie);
 </script>
 </head>
 <body>
