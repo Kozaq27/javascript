@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 36 - Fed</title>
+</head>
+<body>
+    <div>
+        <script language="JavaScript">
+            var x = prompt("Podaj liczbę x=", "");
+            var fed = parseInt(x);
+            if (isNaN(fed)) {
+                document.write("<p style=\"color: red; font-size: 3em;\">To nie jest prawidłowa liczba.</p>");
+            } else {
+                if (fed % 2 === 0) {
+                    document.write("<p style=\"color: red; font-size: 3em;\">Liczba jest parzysta</p>");
+                } else {
+                    document.write("<p style=\"color: silver; font-size: 5em;\">Liczba jest nieparzysta</p>");
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
