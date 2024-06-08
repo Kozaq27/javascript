@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 37 - Fed</title>
+</head>
+<body>
+    <div>
+        <script language="JavaScript">
+            var year = prompt("Podaj rok, od którego JavaScript jest w użyciu:", "");
+            var rok_fed = parseInt(year);
+            var correctYear = 1995;
+            
+            if (isNaN(rok_fed)) {
+                document.write("<p style=\"color: red; font-size: 7em;\">To nie jest prawidłowy rok.</p>");
+            } else {
+                document.write("<p>Wczytany rok=" + rok_fed + "</p>");
+                
+                if (rok_fed === correctYear) {
+                    document.write("<p style=\"color: blue; font-size: 4em;\">Brawo znasz rok od kiedy działa JavaScript</p>");
+                } else {
+                    document.write("<p style=\"color: red; font-size: 7em;\">Źle musisz jeszcze poczytać</p>");
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
