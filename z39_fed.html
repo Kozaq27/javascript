@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 39 - Fedosiuk</title>
+    <style>
+        body {
+            background-color: silver;
+        }
+        .menu {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <p>MENU:</p>
+        <p class="red">1 - CZERWONY</p>
+        <p class="blue">2 - NIEBIESKI</p>
+    </div>
+    <input type="button" name="fedosiuk" value="Oblicz" onclick="fun_fed()" />
+
+    <script>
+        function fun_fed() {
+            var x_fed = prompt("Podaj kolor", "").toLowerCase();
+
+            if (x_fed == 1 || x_fed == "czerwony") {
+                document.write('<h1 style="color: red;">wczytałeś kolor czerwony</h1><br />');
+            } else if (x_fed == 2 || x_fed == "niebieski") {
+                document.write('<h1 style="color: blue; font-size: 1em;">wczytałeś kolor niebieski</h1><br />');
+            } else {
+                document.write('<h1 style="color: black;">Nieznany kolor</h1><br />');
+            }
+        }
+    </script>
+</body>
+</html>

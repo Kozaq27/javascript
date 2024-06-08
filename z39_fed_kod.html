@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 39 - Fedosiuk KOD</title>
+</head>
+<body>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 39 - Fedosiuk&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            background-color: silver;
+        }
+        .menu {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="menu"&gt;
+        &lt;p&gt;MENU:&lt;/p&gt;
+        &lt;p class="red"&gt;1 - CZERWONY&lt;/p&gt;
+        &lt;p class="blue"&gt;2 - NIEBIESKI&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;input type="button" name="fedosiuk" value="Oblicz" onclick="fun_fed()" /&gt;
+
+    &lt;script&gt;
+        function fun_fed() {
+            var x_fed = prompt("Podaj kolor", "").toLowerCase();
+
+            if (x_fed == 1 || x_fed == "czerwony") {
+                document.write('&lt;h1 style="color: red;"&gt;wczytałeś kolor czerwony&lt;/h1&gt;&lt;br /&gt;');
+            } else if (x_fed == 2 || x_fed == "niebieski") {
+                document.write('&lt;h1 style="color: blue; font-size: 1em;"&gt;wczytałeś kolor niebieski&lt;/h1&gt;&lt;br /&gt;');
+            } else {
+                document.write('&lt;h1 style="color: black;"&gt;Nieznany kolor&lt;/h1&gt;&lt;br /&gt;');
+            }
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>
