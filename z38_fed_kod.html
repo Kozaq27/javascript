@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 38 - Fedosiuk KOD</title>
+</head>
+<body>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 38 - Fedosiuk&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            background-color: silver;
+            font-size: calc(40px + (7 % 7) * 5px);
+            color: green;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;script language="JavaScript"&gt;
+            var imie = "Jakub";
+            var nazwisko = "Fedosiuk";
+            var dzienUrodzenia = 6;
+            var numer_w_dzienniku = 7;
+
+            var liczba1 = imie.length;
+            var liczba2 = liczba1 + 7;
+            var liczba3 = nazwisko.length;
+            var liczba4 = liczba3 + 4;
+
+            document.write("&lt;p&gt;Imię i nazwisko: " + imie + " " + nazwisko + "&lt;/p&gt;");
+            document.write("&lt;p&gt;Obliczone liczby:&lt;/p&gt;");
+            document.write("&lt;p&gt;Liczba1: " + liczba1 + "&lt;/p&gt;");
+            document.write("&lt;p&gt;Liczba2: " + liczba2 + "&lt;/p&gt;");
+            document.write("&lt;p&gt;Liczba3: " + liczba3 + "&lt;/p&gt;");
+            document.write("&lt;p&gt;Liczba4: " + liczba4 + "&lt;/p&gt;");
+
+            var opcja_fed = prompt("Wybierz opcję (1, 2, 3):", "");
+
+            if (opcja_fed == liczba1) {
+                document.write("&lt;p style=&quot;color: blue; font-size: 4em;&quot;&gt;Jesteś w opcja " + liczba1 + " --&gt; teoria&lt;/p&gt;");
+            } else if (opcja_fed == liczba3 + 20) {
+                var liczba_fed = prompt("Podaj liczbę:", "");
+                liczba_fed = parseInt(liczba_fed);
+                if (liczba_fed &gt;= liczba1 && liczba_fed &lt; liczba2) {
+                    document.write("&lt;p style=&quot;color: red; font-size: 7em;&quot;&gt;Liczba jest w przedziale (od " + liczba1 + " do " + liczba2 + "]&lt;/p&gt;");
+                } else {
+                    document.write("&lt;p style=&quot;color: red; font-size: 7em;&quot;&gt;Liczba nie jest w przedziale (od " + liczba1 + " do " + liczba2 + "]&lt;/p&gt;");
+                }
+            } else if (opcja_fed == dzienUrodzenia + 50) {
+                var liczba2_fed = prompt("Podaj liczbę:", "");
+                liczba2_fed = parseInt(liczba2_fed);
+                if (liczba2_fed &lt; liczba1 || liczba2_fed &gt;= liczba2) {
+                    document.write("&lt;p style=&quot;color: green; font-size: 7em;&quot;&gt;Liczba jest w przedziale (-∞ do " + liczba1 + ") lub [ " + liczba2 + " do ∞)&lt;/p&gt;");
+                } else {
+                    document.write("&lt;p style=&quot;color: red; font-size: 7em;&quot;&gt;Liczba nie jest w przedziale (-∞ do " + liczba1 + ") lub [ " + liczba2 + " do ∞)&lt;/p&gt;");
+                }
+            } else {
+                document.write("&lt;p style=&quot;color: red; font-size: 7em;&quot;&gt;Nie ma takiej opcji&lt;/p&gt;");
+            }
+        &lt;/script&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>

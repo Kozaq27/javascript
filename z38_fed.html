@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 38 - Fedosiuk</title>
+    <style>
+        body {
+            background-color: silver;
+            font-size: calc(40px + (7 % 7) * 5px);
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <script language="JavaScript">
+            var imie = "Jakub";
+            var nazwisko = "Fedosiuk";
+            var dzienUrodzenia = 6;
+            var numer_w_dzienniku = 7;
+
+            var liczba1 = imie.length;
+            var liczba2 = liczba1 + 7;
+            var liczba3 = nazwisko.length;
+            var liczba4 = liczba3 + 4;
+
+            document.write("<p>Imię i nazwisko: " + imie + " " + nazwisko + "</p>");
+            document.write("<p>Obliczone liczby:</p>");
+            document.write("<p>Liczba1: " + liczba1 + "</p>");
+            document.write("<p>Liczba2: " + liczba2 + "</p>");
+            document.write("<p>Liczba3: " + liczba3 + "</p>");
+            document.write("<p>Liczba4: " + liczba4 + "</p>");
+
+            var opcja_fed = prompt("Wybierz opcję (1, 2, 3):", "");
+
+            if (opcja_fed == liczba1) {
+                document.write("<p style=\"color: blue; font-size: 4em;\">Jesteś w opcja " + liczba1 + " --> teoria</p>");
+            } else if (opcja_fed == liczba3 + 20) {
+                var liczba_fed = prompt("Podaj liczbę:", "");
+                liczba_fed = parseInt(liczba_fed);
+                if (liczba_fed >= liczba1 && liczba_fed < liczba2) {
+                    document.write("<p style=\"color: red; font-size: 7em;\">Liczba jest w przedziale (od " + liczba1 + " do " + liczba2 + "]</p>");
+                } else {
+                    document.write("<p style=\"color: red; font-size: 7em;\">Liczba nie jest w przedziale (od " + liczba1 + " do " + liczba2 + "]</p>");
+                }
+            } else if (opcja_fed == dzienUrodzenia + 50) {
+                var liczba2_fed = prompt("Podaj liczbę:", "");
+                liczba2_fed = parseInt(liczba2_fed);
+                if (liczba2_fed < liczba1 || liczba2_fed >= liczba2) {
+                    document.write("<p style=\"color: green; font-size: 7em;\">Liczba jest w przedziale (-∞ do " + liczba1 + ") lub [ " + liczba2 + " do ∞)</p>");
+                } else {
+                    document.write("<p style=\"color: red; font-size: 7em;\">Liczba nie jest w przedziale (-∞ do " + liczba1 + ") lub [ " + liczba2 + " do ∞)</p>");
+                }
+            } else {
+                document.write("<p style=\"color: red; font-size: 7em;\">Nie ma takiej opcji</p>");
+            }
+        </script>
+    </div>
+</body>
+</html>
