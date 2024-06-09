@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tworzenie prostokąta - Fedosiuk</title>
+<style>
+    #rectangle {
+        font-family: monospace;
+        white-space: pre;
+    }
+</style>
+</head>
+<body>
+    <label for="name">Imię:</label>
+    <input type="text" id="name"><br><br>
+    <label for="surname">Nazwisko:</label>
+    <input type="text" id="surname"><br><br>
+    <button onclick="drawRectangle()">Utwórz Prostokąt</button><br><br>
+    <pre id="rectangle"></pre>
+
+    <script>
+        function calculateDimensions(name, surname) {
+            var a = (surname.length % 4) + 5;
+            var b = (name.length % 6) + 20;
+            return [a, b];
+        }
+
+        function drawRectangle() {
+            var name = document.getElementById("name").value;
+            var surname = document.getElementById("surname").value;
+            var dimensions = calculateDimensions(name, surname);
+            var a = dimensions[0];
+            var b = dimensions[1];
+            var rectangle = "";
+
+            // Górna krawędź
+            rectangle += "*".repeat(b) + "\n";
+            // Środkowe krawędzie
+            for (var i = 0; i < a - 2; i++) {
+                rectangle += "*" + " ".repeat(b - 2) + "*\n";
+            }
+            // Dolna krawędź
+            rectangle += "*".repeat(b);
+
+            document.getElementById("rectangle").textContent = rectangle;
+        }
+    </script>
+</body>
+</html>
