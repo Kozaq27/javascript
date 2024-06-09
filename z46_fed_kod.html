@@ -5,28 +5,28 @@
 </head>
 <body>
     <pre>
-&lt;<!DOCTYPE html>&gt;
-&lt;<html lang="pl">&gt;
-&lt;<head>&gt;
-    &lt;<meta charset="UTF-8">&gt;
-    &lt;<title>&gt;Sprawdzenie danych Fedosiuk&lt;&lt;</title>&gt;
-&lt;</head>&gt;
-&lt;<body>&gt;
-&lt;<div style="color:red; font-size:50px;">&gt;
-&lt;<script>&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Sprawdzenie danych Fedosiuk&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style="color:red; font-size:50px;"&gt;
+&lt;script&gt;
     &lt;do {&gt;
         &lt;var wysokosc = prompt("Wysokość trójkąta:", "");&gt;
         &lt;var h_fed = parseFloat(wysokosc);&gt;
-    &lt;} while (h_fed <= 0);&gt;
+    &lt;} while (h_fed &lt;= 0);&gt;
 
     &lt;do {&gt;
         &lt;var podstawa = prompt("Podstawa trójkąta:", "");&gt;
         &lt;var a_fed = parseFloat(podstawa);&gt;
-    &lt;} while (!(a_fed > 0));&gt;
+    &lt;} while (!(a_fed &gt; 0));&gt;
 
     &lt;var Pole = a_fed * h_fed / 2;&gt;
-   &lt; document.write("Pole = " + Pole.toFixed(2) + " cm^2" + "<br>");&gt;
-&lt;</script>&gt;
-&lt;</div>&gt;
-&lt;</body>&gt;
-&lt;</html>
+   &lt; document.write("Pole = " + Pole.toFixed(2) + " cm^2" + "&lt;br&gt;");&gt;
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
