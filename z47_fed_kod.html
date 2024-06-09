@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kod - Sprawdzanie trójkąta - Fedosiuk</title>
+</head>
+<body>
+    <h1>Kod - Sprawdzanie trójkąta</h1>
+    <pre>
+        function sprawdzTrojkat() {
+            let a, b, c;
+            let isValid = false;
+
+            do {
+                a = parseFloat(prompt("Podaj bok a (większy od 0):"));
+                b = parseFloat(prompt("Podaj bok b (większy od 0):"));
+                c = parseFloat(prompt("Podaj bok c (większy od 0):"));
+
+                if (a > 0 && b > 0 && c > 0) {
+                    if (a + b > c && a + c > b && b + c > a) {
+                        isValid = true;
+                        alert("Podane boki tworzą trójkąt.");
+                    } else {
+                        alert("Podane boki nie tworzą trójkąta. Spróbuj ponownie.");
+                    }
+                } else {
+                    alert("Każdy bok musi być większy od zera. Spróbuj ponownie.");
+                }
+            } while (!isValid);
+        }
+    </pre>
+</body>
+</html>
