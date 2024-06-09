@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liczby pierwsze z wielomianu - Fedosiuk</title>
+    <script type="text/javascript">
+        function isPrime(num) { //sprawdza czy liczba jest pierwsza
+            if (num <= 1) return false;
+            if (num <= 3) return true;
+
+            if (num % 2 === 0 || num % 3 === 0) return false;
+
+            for (var i = 5; i * i <= num; i += 6) {
+                if (num % i === 0 || num % (i + 2) === 0) return false;
+            }
+            return true;
+        }
+
+        function calculatePrimes() { //oblicza wartość wielomianu w
+            var linesPrinted = 0;
+
+            for (var i = 0; i < 40; i++) {
+                var w = i * i + i + 41;
+
+                if (isPrime(w)) {
+                    document.write("i = " + i + " ");
+                    document.write("w(" + i + ") = " + w + "<br><br>");
+
+                    linesPrinted++;
+
+                    if (linesPrinted === 5) { //zatrzymanie po pięciu liniach
+                        linesPrinted = 0;
+                        if (!confirm("Aby kontynuować, naciśnij dowolny klawisz.")) {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="calculatePrimes()">
+</body>
+</html>
