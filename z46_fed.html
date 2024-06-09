@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Sprawdzenie danych Fedosiuk</title>
+</head>
+<body>
+<div style="color:red; font-size:50px;">
+<script>
+    do {
+        var wysokosc = prompt("Wysokość trójkąta:", "");
+        var h_fed = parseFloat(wysokosc);
+    } while (h_fed <= 0);
+
+    do {
+        var podstawa = prompt("Podstawa trójkąta:", "");
+        var a_fed = parseFloat(podstawa);
+    } while (!(a_fed > 0));
+
+    var Pole = a_fed * h_fed / 2;
+    document.write("Pole = " + Pole.toFixed(2) + " cm^2" + "<br>");
+</script>
+</div>
+</body>
+</html>
