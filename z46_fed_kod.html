@@ -1,32 +1,52 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
-    <title>Zadanie 46 - Fedosiuk KOD</title>
+    <title>Kod - Sprawdzanie trójkąta - Fedosiuk</title>
 </head>
 <body>
+    <h1>Kod - Sprawdzanie trójkąta - Fedosiuk</h1>
     <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="pl"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Sprawdzenie danych Fedosiuk&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div style="color:red; font-size:50px;"&gt;
-&lt;script&gt;
-    &lt;do {&gt;
-        &lt;var wysokosc = prompt("Wysokość trójkąta:", "");&gt;
-        &lt;var h_fed = parseFloat(wysokosc);&gt;
-    &lt;} while (h_fed &lt;= 0);&gt;
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Sprawdzanie trójkąta&lt;/title&gt;
+            &lt;script&gt;
+                function sprawdzTrojkat() {
+                    let a, b, c;
+                    let isValid = false;
+                    let attempts = 0;
+                    const maxAttempts = 10; // Ustal maksymalną liczbę prób
 
-    &lt;do {&gt;
-        &lt;var podstawa = prompt("Podstawa trójkąta:", "");&gt;
-        &lt;var a_fed = parseFloat(podstawa);&gt;
-    &lt;} while (!(a_fed &gt; 0));&gt;
+                    do {
+                        a = parseFloat(prompt("Podaj bok a (większy od 0):"));
+                        b = parseFloat(prompt("Podaj bok b (większy od 0):"));
+                        c = parseFloat(prompt("Podaj bok c (większy od 0):"));
 
-    &lt;var Pole = a_fed * h_fed / 2;&gt;
-   &lt; document.write("Pole = " + Pole.toFixed(2) + " cm^2" + "&lt;br&gt;");&gt;
-&lt;/script&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+                        if (a > 0 && b > 0 && c > 0) {
+                            if (a + b > c && a + c > b && b + c > a) {
+                                isValid = true;
+                                alert("Podane boki tworzą trójkąt.");
+                            } else {
+                                alert("Podane boki nie tworzą trójkąta. Spróbuj ponownie.");
+                            }
+                        } else {
+                            alert("Każdy bok musi być większy od zera. Spróbuj ponownie.");
+                        }
+
+                        attempts++;
+                        if (attempts >= maxAttempts) {
+                            alert("Przekroczono maksymalną liczbę prób.");
+                            break;
+                        }
+                    } while (!isValid);
+                }
+            &lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Sprawdzanie trójkąta&lt;/h1&gt;
+            &lt;button onclick="sprawdzTrojkat()"&gt;Sprawdź trójkąt&lt;/button&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+</body>
+</html>
