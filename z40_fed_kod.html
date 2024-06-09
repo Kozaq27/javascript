@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Zadanie 40 - Fedosiuk KOD</title>
+</head>
+<body>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie 40 - Fedosiuk&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Proste działania&lt;/h1&gt;
+    &lt;label for="a"&gt;Podaj pierwszą liczbę:&lt;/label&gt;
+    &lt;input type="number" id="a"&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;label for="b"&gt;Podaj drugą liczbę:&lt;/label&gt;
+    &lt;input type="number" id="b"&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;button onclick="suma_fed()"&gt;DODAWANIE&lt;/button&gt;
+    &lt;button onclick="roznica_fed()"&gt;ODEJMOWANIE&lt;/button&gt;
+    &lt;button onclick="iloczyn_fed()"&gt;MNOŻENIE&lt;/button&gt;
+    &lt;button onclick="iloraz_fed()"&gt;DZIELENIE&lt;/button&gt;
+    &lt;button onclick="teoria_fed()"&gt;TEORIA-Fedosiuk&lt;/button&gt;
+    &lt;div id="wynik" style="margin-top:20px;"&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        function suma_fed() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+                return;
+            }
+            var suma = parseFloat(a) + parseFloat(b);
+            document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma;
+        }
+
+        function roznica_fed() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+                return;
+            }
+            var roznica = parseFloat(a) - parseFloat(b);
+            document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica;
+        }
+
+        function iloczyn_fed() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+                return;
+            }
+            var iloczyn = parseFloat(a) * parseFloat(b);
+            document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn;
+        }
+
+        function iloraz_fed() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+                return;
+            }
+            if (b == 0) {
+                document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+                return;
+            }
+            var iloraz = parseFloat(a) / parseFloat(b);
+            document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz;
+        }
+
+        function teoria_fed() {
+            document.write("&lt;p&gt;&lt;label for='a'&gt;Podaj pierwszą liczbę:&lt;/label&gt; - Tworzy etykietę dla pierwszego pola liczbowego.&lt;/p&gt;");
+            document.write("&lt;p&gt;&lt;input type='number' id='a'&gt; - Tworzy pole liczbowego wejścia o identyfikatorze 'a'.&lt;/p&gt;");
+            document.write("&lt;p&gt;&lt;button onclick='suma_fed()'&gt;DODAWANIE&lt;/button&gt; - Tworzy przycisk do dodawania i przypisuje funkcję suma_fed().&lt;/p&gt;");
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>
