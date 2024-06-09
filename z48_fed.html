@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Harmonic Series Sum</title>
+    <script type="text/javascript">
+        function calculateHarmonicSum() {
+            var sum = 0.0;
+            var n = 1000000; // liczba wyrazów w szeregu
+
+            for (var i = 1; i <= n; i++) {
+                sum += 1.0 / i;
+            }
+
+            document.getElementById("result").innerText = "Suma szeregu harmonicznego od 1 do 1,000,000 wynosi: " + sum;
+        }
+    </script>
+</head>
+<body onload="calculateHarmonicSum()">
+    <h1>Obliczanie sumy szeregu harmonicznego</h1>
+    <p id="result">Obliczanie...</p>
+</body>
+</html>
