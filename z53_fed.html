@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Użycie pętli for do rysowania w trybie tekstowym - Fedosiuk</title>
+    <script type="text/javascript">
+        var a_fed, b_fed;
+        a_fed = prompt("Podaj wartość a: ");
+        b_fed = prompt("Podaj wartość b: ");
+
+        // Górna krawędź
+        document.write("*".repeat(b_fed) + "<br>");
+
+        // Środkowe krawędzie
+        for (var i = 1; i <= (a_fed - 2); i++) {
+            var wiersz_fed = "*";
+            for (var j = 1; j <= (b_fed - 2); j++) {
+                wiersz_fed = wiersz_fed + "&nbsp;&nbsp;";
+            }
+            wiersz_fed = wiersz_fed + "*";
+            document.write(wiersz_fed + "<br>");
+        }
+
+        // Dolna krawędź
+        document.write("*".repeat(b_fed));
+    </script>
+</head>
+<body>
+</body>
+</html>
