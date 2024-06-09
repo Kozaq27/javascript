@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kod - Sprawdzanie trójkąta - Fedosiuk</title>
+    <title>Kod - Sprawdzanie trójkąta - Fedosiuk/title>
 </head>
 <body>
-    <h1>Kod - Sprawdzanie trójkąta</h1>
+    <h1>Kod - Sprawdzanie trójkąta - Fedosiuk</h1>
     <pre>
-        function sprawdzTrojkat() {
-            let a, b, c;
-            let isValid = false;
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Sprawdzanie trójkąta - Fedosiuk&lt;/title&gt;
+            &lt;script&gt;
+                function sprawdzTrojkat() {
+                    let a, b, c;
+                    let isValid = false;
+                    let attempts = 0;
+                    const maxAttempts = 10; // Ustal maksymalną liczbę prób
 
-            do {
-                a = parseFloat(prompt("Podaj bok a (większy od 0):"));
-                b = parseFloat(prompt("Podaj bok b (większy od 0):"));
-                c = parseFloat(prompt("Podaj bok c (większy od 0):"));
+                    do {
+                        a = parseFloat(prompt("Podaj bok a (większy od 0):"));
+                        if (isNaN(a) || a <= 0) {
+                            alert("Bok a musi być liczbą większą od 0. Spróbuj ponownie.");
+                            continue;
+                        }
 
-                if (a > 0 && b > 0 && c > 0) {
-                    if (a + b > c && a + c > b && b + c > a) {
-                        isValid = true;
-                        alert("Podane boki tworzą trójkąt.");
-                    } else {
-                        alert("Podane boki nie tworzą trójkąta. Spróbuj ponownie.");
-                    }
-                } else {
-                    alert("Każdy bok musi być większy od zera. Spróbuj ponownie.");
+                        b = parseFloat(prompt("Podaj bok b (większy od 0):"));
+                        if (isNaN(b) || b <= 0) {
+                            alert("Bok b musi być liczbą większą od 0. Spróbuj ponownie.");
+                            continue;
+                        }
+
+                        c = parseFloat(prompt("Podaj bok c (większy od 0):"));
+                        if (isNaN(c) || c <= 0) {
+                            alert("Bok c musi być liczbą większą od 0. Spróbuj ponownie.");
+                            continue;
+                        }
+
+                        if (a + b > c && a + c > b && b + c > a) {
+                            isValid = true;
+                            alert("Podane boki tworzą trójkąt.");
+                        } else {
+                            alert("Podane boki nie tworzą trójkąta. Spróbuj ponownie.");
+                        }
+
+                        attempts++;
+                        if (attempts >= maxAttempts) {
+                            alert("Przekroczono maksymalną liczbę prób.");
+                            break;
+                        }
+                    } while (!isValid);
                 }
-            } while (!isValid);
-        }
+            &lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Sprawdzanie trójkąta&lt;/h1&gt;
+            &lt;button onclick="sprawdzTrojkat()"&gt;Sprawdź trójkąt&lt;/button&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
     </pre>
 </body>
 </html>
