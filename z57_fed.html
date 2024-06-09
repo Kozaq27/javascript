@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pierwiastki liczb - Fedosiuk</title>
+    <script type="text/javascript">
+        function calculateRoots() {
+            var startNumber = parseInt(prompt("Podaj numer w dzienniku:", ""));
+            var linesPrinted = 0;
+
+            for (var i = startNumber; i <= startNumber + 15; i++) {
+                var sqrt2 = Math.sqrt(i).toFixed(2);
+                var sqrt4 = Math.sqrt(Math.sqrt(i)).toFixed(2);
+
+                document.write("I = " + i + "<br>");
+                document.write("pierw_2(" + i + ") = " + sqrt2 + " ");
+                document.write("pierw_4(" + i + ") = " + sqrt4 + "<br>");
+                document.write("<br>");
+
+                linesPrinted++;
+
+                if (linesPrinted === 3) {
+                    linesPrinted = 0;
+                    if (!confirm("Aby kontynuować, naciśnij dowolny klawisz.")) {
+                        break;
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="calculateRoots()">
+</body>
+</html>
