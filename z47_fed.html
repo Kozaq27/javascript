@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sprawdzanie trójkąta - Fedosiuk</title>
+    <title>Sprawdzanie trójkąta</title>
     <script>
         function sprawdzTrojkat() {
             let a, b, c;
             let isValid = false;
+            let attempts = 0;
+            const maxAttempts = 10; // Ustal maksymalną liczbę prób
 
             do {
                 a = parseFloat(prompt("Podaj bok a (większy od 0):"));
-                b = parseFloat(prompt("Podaj bok b (większy od 0):"));
-                c = parseFloat(prompt("Podaj bok c (większy od 0):"));
+                if (isNaN(a) || a <= 0) {
+                    alert("Bok a musi być liczbą większą od 0. Spróbuj ponownie.");
+                    continue;
+                }
 
-                if (a > 0 && b > 0 && c > 0) {
-                    if (a + b > c && a + c > b && b + c > a) {
-                        isValid = true;
-                        alert("Podane boki tworzą trójkąt.");
-                    } else {
-                        alert("Podane boki nie tworzą trójkąta. Spróbuj ponownie.");
-                    }
+                b = parseFloat(prompt("Podaj bok b (większy od 0):"));
+                if (isNaN(b) || b <= 0) {
+                    alert("Bok b musi być liczbą większą od 0. Spróbuj ponownie.");
+                    continue;
+                }
+
+                c = parseFloat(prompt("Podaj bok c (większy od 0):"));
+                if (isNaN(c) || c <= 0) {
+                    alert("Bok c musi być liczbą większą od 0. Spróbuj ponownie.");
+                    continue;
+                }
+
+                if (a + b > c && a + c > b && b + c > a) {
+                    isValid = true;
+                    alert("Podane boki tworzą trójkąt.");
                 } else {
-                    alert("Każdy bok musi być większy od zera. Spróbuj ponownie.");
+                    alert("Podane boki nie tworzą trójkąta. Spróbuj ponownie.");
+                }
+
+                attempts++;
+                if (attempts >= maxAttempts) {
+                    alert("Przekroczono maksymalną liczbę prób.");
+                    break;
                 }
             } while (!isValid);
         }
