@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 43 - Fedosiuk</title>
+    <script>
+        function wypiszParzyste() {
+            var liczba = parseInt(prompt("Podaj liczbę:"));
+
+            // Sprawdzenie, czy wprowadzona wartość jest liczbą
+            if (isNaN(liczba)) {
+                alert("To nie jest liczba!");
+                return;
+            }
+
+            // Wypisanie liczb parzystych
+            for (var i = 2; i <= liczba; i += 2) {
+                document.write(i + "<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="wypiszParzyste()">Wypisz liczby parzyste</button>
+</body>
+</html>
