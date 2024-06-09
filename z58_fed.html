@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div style="color:red;font-size:18px;">
+            <script language="JavaScript">
+            var x = prompt("Podaj liczbę 1 =", "");
+            var Liczba1_fed = parseInt(x);
+            var x = prompt("Podaj liczbę 2 =", "");
+            var Liczba2_fed = parseInt(x);
+            
+            if (Liczba1_fed < Liczba2_fed) {
+                for (var i = Liczba1_fed; i <= Liczba2_fed; i++) { 
+                    if (i % 2 == 1) {
+                        document.write("<p style=\"font-size:18px; color:black;\"><br>" + i + "<br></p>"); 
+                    }
+                }
+            }
+            if (Liczba1_fed > Liczba2_fed) {
+                for (var i = Liczba1_fed; i >= Liczba2_fed; i--) { 
+                    if (i % 2 == 1) {
+                        document.write("<p style=\"font-size:18px; color:black;\"><br>" + i + "<br></p>"); 
+                    }
+                }
+            }
+            if (Liczba1_fed == Liczba2_fed) {
+                document.write("Brak obliczeń"); 
+            }
+            </script>
+        </div>
+    </body>
+</html>
