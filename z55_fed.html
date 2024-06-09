@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zmiana Wielkości Tekstu - Fedosiuk</title>
+    <script type="text/javascript">
+        function zmienTekst() {
+            // Wczytywanie danych od użytkownika
+            var l1_fed = parseInt(prompt("Podaj pierwszą liczbę z przedziału <20,60>:", ""));
+            var l2_fed = parseInt(prompt("Podaj drugą liczbę z przedziału <20,60>:", ""));
+            var pocz_fed = parseInt(prompt("Podaj wartość początkową wielkości tekstu (np. 20):", ""));
+            var tekst_fed = prompt("Podaj dowolny tekst:", "");
+
+            // Sprawdzanie, czy liczby należą do przedziału <20,60>
+            if (l1_fed < 20 || l1_fed > 60) {
+                alert("Liczba l1 nie należy do przedziału <20,60>");
+                return;
+            }
+            if (l2_fed < 20 || l2_fed > 60) {
+                alert("Liczba l2 nie należy do przedziału <20,60>");
+                return;
+            }
+
+            var i = pocz_fed; // Ustawienie początkowego rozmiaru tekstu
+
+            // Warunki zwiększania lub zmniejszania tekstu
+            if (l1_fed < l2_fed) {
+                // Zwiększanie wielkości tekstu
+                while (i <= 100) {
+                    document.write("<p style='font-size:" + i + "px; color: black;'>" + tekst_fed + "</p>");
+                    i += 5;
+                }
+            } else if (l2_fed < l1_fed) {
+                // Zmniejszanie wielkości tekstu
+                while (i >= 0) {
+                    document.write("<p style='font-size:" + i + "px; color: black;'>" + tekst_fed + "</p>");
+                    i -= 5;
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="zmienTekst()">
+</body>
+</html>
